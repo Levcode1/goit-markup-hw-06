@@ -56,7 +56,8 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
 .header-narrow {
     display: flex;
     align-items: center;
-    width: 1158px;
+    /* width: 1158px; */
+    padding: 16px;
 }
 
 .header-navigation {
@@ -71,7 +72,8 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
-    margin-right: 76px;
+    /* margin-right: 76px; */
+    margin-right: 146px;
 }
 
 .header-logo-white {
@@ -79,7 +81,7 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
 }
 
 .header-menu-list { 
-    display: flex;
+    display: none;
     align-items: center;
     gap: 40px;
 }
@@ -120,7 +122,7 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
 }
 
 .header-contacts-list {
-    display: flex;
+    display: none;
     align-items: center;
     gap: 40px;
 }
@@ -141,6 +143,97 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     color: #404bbf;
 }
 
+.modal-icon-menu {
+    fill: #2f2f37;
+}
+
+.menu-open-btn {
+    right: 24px;
+    cursor: pointer;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0;
+
+}
+
+ /* ////////////////////////////////////////MOB-MENU////////////////////////////////// */
+
+.mob-menu {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-left: 16px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.mob-navigation {
+}
+
+.modal-close-hdr {
+    display: block;
+    margin-left: auto;
+    margin-bottom: 24px;
+}
+
+.mob-menu-list {}
+
+.mob-menu-item:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.mob-menu-link {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11111;
+    letter-spacing: 0.02em;
+    color: #2e2f42;}
+
+.current {}
+
+.mob-menu-contacts {}
+
+.mob-menu-contacts-list {}
+
+.mob-menu-contacts-item {}
+
+.mob-menu-contacts-link {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #434455;
+}
+
+.mob-list-info {
+    display: flex;
+    gap: 40px;
+}
+
+.mob-item-info {}
+
+.mob-social-link {}
+
+.mob-social-icon {
+    fill: #4d5ae5;
+}
+
 /* //////////////////////////HERO////////////////////////////// */
 
 .hero { 
@@ -150,7 +243,7 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     padding-bottom: 72px;
     background-image: 
     linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url("../images/prie-hdr.jpg");
+    url("../images/hero-mob.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -160,6 +253,12 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     /* height: 600px; */
     margin: 0 auto;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+    @media screen and (min-resolution: 2x), (-webkit-device-pixel-ratio: 2) {
+        background-image:
+            linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url("../images/hero-mob-2x.jpg");
+    }
 }
 
 
@@ -895,9 +994,47 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
 @media screen and (min-width:736px) {
     .container {
         width: 768px;
-        padding-left: 16px;
-        padding-right: 16px;
+        padding: 0 16px;
         margin: 0 auto;
+    }
+
+    .menu-open-btn {
+        visibility: hidden;
+    }
+
+    .header-navigation {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-logo {
+        padding: 24px 0;
+        margin-right: 120px;
+    }
+
+    .header-menu-list {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .header-menu-link {
+        position: relative;
+    }
+
+    .header-narrow {
+        padding: 0 16px;
+    }
+
+    .header-contacts {
+        font-style: normal;
+        display: block;
+    }
+
+    .header-contacts-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
     }
 
     .hero {
@@ -905,6 +1042,15 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
         padding-bottom: 112px;
         width: 768px;
         height: 436px;
+        background-image:
+        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+         url("../images/hero-tab.jpg");
+
+        @media screen and (min-resolution: 2x), (-webkit-device-pixel-ratio: 2) {
+            background-image:
+                linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+             url("../images/hero-tab-2x.jpg");
+            }
     }
 
     .hero-title {
@@ -922,7 +1068,7 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
 
     .features-list {
         display: flex;
-        gap: 24px;
+        gap: 72px 24px;
         flex-wrap: wrap;
     }
 
@@ -1018,6 +1164,15 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
         padding-bottom: 188px;
         width: 1440px;
         height: 600px;
+        background-image:
+        linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url("../images/prie-hdr.jpg");
+
+        @media screen and (min-resolution: 2x), (-webkit-device-pixel-ratio: 2) {
+            background-image:
+                linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url("../images/prie-hdr-2x.jpg");
+            }
         }
     
     .hero-title {

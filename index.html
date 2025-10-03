@@ -47,7 +47,7 @@
   
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="container header-narrow">
         <nav class="header-navigation">
           <a 
@@ -76,7 +76,7 @@
             </li>
           </ul>
         </nav>
-          <address class="header-contacts">
+        <address class="header-contacts">
             <ul class="header-contacts-list">
               <li class="header-contacts-item">
                 <a 
@@ -91,9 +91,82 @@
                 >
               </li>
             </ul>
-          </address>
+        </address>
+        <button type="button" class="menu-open-btn">
+          <svg class="modal-icon-menu" height="17" width="14">
+            <use href="./images/icon1.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
-    </header> -->
+      <div class="mob-menu">
+        <div>
+          <button type="button" class="modal-close">
+            <svg class="modal-icon-close" height="8" width="8">
+              <use href="./images/icon1.svg#icon-close"></use>
+            </svg>
+            </button>
+            <nav class="mob-navigation">
+              <ul class="mob-menu-list">
+                <li class="mob-menu-item">
+                  <a class="mob-menu-link current" href="./index.html">Studio</a>
+                </li>
+                <li class="mob-menu-item">
+                  <a class="mob-menu-link" href="">Portfolio</a>
+                </li>
+                <li class="mob-menu-item">
+                  <a class="mob-menu-link" href="">Contacts</a>
+                </li>
+              </ul>
+            </nav>
+        </div>
+        <div>
+            <address class="mob-menu-contacts">
+              <ul class="mob-menu-contacts-list">
+                <li class="mob-menu-contacts-item">
+                  <a class="mob-menu-contacts-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </li>
+                <li class="mob-menu-contacts-item">
+                  <a class="mob-menu-contacts-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+                </li>
+              </ul>
+            </address>
+            <ul class="mob-list-info">
+              <li class="mob-item-info">
+                <a href="./index.html" class="mob-social-link">
+                  <svg class="mob-social-icon" width="16" height="16">
+                    <use href="./images/social.svg#icon-instagram-2">
+                    </use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mob-item-info">
+                <a href="./index.html" class="mob-social-link">
+                  <svg class="mob-social-icon" width="16" height="16">
+                    <use href="./images/social.svg#icon-twitter-1">
+                    </use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mob-item-info">
+                <a href="./index.html" class="mob-social-link">
+                  <svg class="mob-social-icon" width="16" height="16">
+                    <use href="./images/social.svg#icon-facebook-1">
+                    </use>
+                  </svg>
+                </a>
+              </li>
+              <li class="mob-item-info">
+                <a href="./index.html" class="mob-social-link">
+                  <svg class="mob-social-icon" width="16" height="16">
+                    <use href="./images/social.svg#icon-linkedin-1">
+                    </use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+        </div>
+      </div>
+    </header>
     <main> 
       <section class="hero">
         <div class="container">
@@ -183,6 +256,7 @@
             <ul class="team-list">
               <li class="team-item">
                 <img class="team-image img"
+                  srcset="./images/teste-1-mob-x2.jpg"
                   src="./images/teste-1.jpg" 
                   alt="Mark Guerrero"
                   width="264"
@@ -236,7 +310,8 @@
                   </div>
               </li>
               <li class="team-item">
-                <img class="team-image img" 
+                <img class="team-image img"
+                  srcset="./images/teste-2-mob-x2.jpg" 
                   src="./images/teste-2.jpg" 
                   alt="Tom Ford"
                   width="264"
@@ -291,6 +366,7 @@
               </li>
               <li class="team-item">
                 <img  class="team-image img"
+                  srcset="./images/teste-3-mob-x2.jpg"
                   src="./images/teste-3.jpg" 
                   alt="Camila Garcia"
                   width="264"
@@ -345,6 +421,7 @@
               </li>
               <li class="team-item" >
                 <img  class="team-image img"
+                  srcset="./images/teste-4-mob-x2.jpg"
                   src="./images/teste-4.jpg" 
                   alt="Daniel Wilson"
                   width="264"
@@ -406,12 +483,26 @@
           <ul class="portfolio-list">
             <li class="portfolio-item"> 
               <div class="taste-iteam-cover">
-                <img class="portfolio-image img"
+                <picture>
+                  <source
+                  srcset="./images/port-1.jpg, 
+                  ./images/port-1-2x.jpg "
+                  media="(min-widht: 1128px)"
+                  />
+                  <source srcset="./images/port-1-tab.jpg, 
+                  ./images/port-1-tab-2x.jpg " 
+                  media="(min-widht: 736px)" 
+                  />
+                  <source srcset="./images/port-1-mob.jpg, 
+                   ./images/port-1-mob-2x.jpg " 
+                   media="(max-widht: 735px)" 
+                  />
+                  <img class="portfolio-image img"
                   src="./images/port-1.jpg" 
                   alt="Banking App"
                   width="360"
-                  height="300"
-                />
+                  />
+                </picture>
                 <p class="taste-iteam-text">
                   14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
                   ·
@@ -425,12 +516,23 @@
             </li>
             <li class="portfolio-item"> 
                 <div  class="taste-iteam-cover">
-                  <img class="portfolio-image img"
-                      src="./images/port-2.jpg" 
-                      alt="Cashless Payment"
-                      width="360"
-                      height="300"
-                    /> 
+                  <picture>
+                    <source srcset="./images/port-2.jpg, 
+                      ./images/port-2-2x.jpg " 
+                      media="(min-widht: 1128px)" />
+                    <source srcset="./images/port-2-tab.jpg, 
+                      ./images/port-2-tab-2x.jpg " 
+                      media="(min-widht: 736px)" />
+                    <source srcset="./images/port-2-mob.jpg, 
+                      ./images/port-2-mob-2x.jpg " 
+                      media="(max-widht: 735px)" />
+                    <img class="portfolio-image img" 
+                    src="./images/port-2.jpg" 
+                    alt="Cashless Payment" 
+                    width="360"
+                    />
+                  </picture>
+ 
                     <p class="taste-iteam-text">
                       14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App ·
                       Cloud Storage App
@@ -443,12 +545,22 @@
             </li>
             <li class="portfolio-item"> 
               <div class="taste-iteam-cover">
-                <img class="portfolio-image img"
+                <picture>
+                  <source srcset="./images/port-3.jpg, 
+                    ./images/port-3-2x.jpg " 
+                    media="(min-widht: 1128px)" />
+                  <source srcset="./images/port-3-tab.jpg, 
+                    ./images/port-3-tab-2x.jpg " 
+                    media="(min-widht: 736px)" />
+                  <source srcset="./images/port-3-mob.jpg, 
+                    ./images/port-3-mob-2x.jpg " 
+                    media="(max-widht: 735px)" />
+                  <img class="portfolio-image img" 
                   src="./images/port-3.jpg" 
-                  alt="Mediator App"
-                  width="360"
-                  height="300"
-                /> 
+                  alt="Mediator App" 
+                  width="360" 
+                  />
+                </picture> 
                 <p class="taste-iteam-text">
                   14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
                   ·
@@ -462,12 +574,21 @@
             </li>
             <li class="portfolio-item"> 
               <div class="taste-iteam-cover">
-                <img class="portfolio-image img"
+                <picture>
+                  <source srcset="./images/port-4.jpg, 
+                    ./images/port-4-2x.jpg " 
+                    media="(min-widht: 1128px)" />
+                  <source srcset="./images/port-4-tab.jpg, 
+                    ./images/port-4-tab-2x.jpg " 
+                    media="(min-widht: 736px)" />
+                  <source srcset="./images/port-4-mob.jpg, 
+                    ./images/port-4-mob-2x.jpg " 
+                    media="(max-widht: 735px)" />
+                  <img class="portfolio-image img" 
                   src="./images/port-4.jpg" 
-                  alt="Taxi Service"
-                  width="360"
-                  height="300"
-                /> 
+                  alt="Taxi Service" 
+                  width="360" />
+                </picture> 
                 <p class="taste-iteam-text">
                   14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
                   ·
@@ -481,12 +602,21 @@
             </li>
             <li class="portfolio-item"> 
               <div class="taste-iteam-cover">
-                <img class="portfolio-image img"
+                <picture>
+                  <source srcset="./images/port-5.jpg, 
+                    ./images/port-5-2x.jpg " 
+                    media="(min-widht: 1128px)" />
+                  <source srcset="./images/port-5-tab.jpg, 
+                    ./images/port-5-tab-2x.jpg " 
+                    media="(min-widht: 736px)" />
+                  <source srcset="./images/port-5-mob.jpg, 
+                    ./images/port-5-mob-2x.jpg " 
+                    media="(max-widht: 735px)" />
+                  <img class="portfolio-image img" 
                   src="./images/port-5.jpg" 
-                  alt="Screen Illustrations"
-                  width="360"
-                  height="300"
-                /> 
+                  alt="Screen Illustrations" 
+                  width="360" />
+                </picture>
                 <p class="taste-iteam-text">
                   14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
                   ·
@@ -500,12 +630,21 @@
              </li>
              <li class="portfolio-item"> 
               <div class="taste-iteam-cover">
-                <img class="portfolio-image img"
-                  src="./images/port-6.jpg"
-                  alt="Online Courses"
-                  width="360"
-                  height="300"
-                /> 
+                <picture>
+                  <source srcset="./images/port-6.jpg, 
+                    ./images/port-6-2x.jpg " 
+                    media="(min-widht: 1128px)" />
+                  <source srcset="./images/port-6-tab.jpg, 
+                    ./images/port-6-tab-2x.jpg " 
+                    media="(min-widht: 736px)" />
+                  <source srcset="./images/port-6-mob.jpg, 
+                    ./images/port-6-mob-2x.jpg " 
+                    media="(max-widht: 735px)" />
+                  <img class="portfolio-image img" 
+                  src="./images/port-6.jpg" 
+                  alt="Online Courses" 
+                  width="360" />
+                </picture>
                 <p class="taste-iteam-text">
                   14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
                   ·
