@@ -277,8 +277,7 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    width: 320px;
-    height: 432px;
+    max-width: 320px;
     /* max-width: 1440px; */
     /* height: 600px; */
     margin: 0 auto;
@@ -440,6 +439,7 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     padding: 0;
     margin: 0;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .team-item {
@@ -638,7 +638,6 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
 .footer-narrow {
     display: flex;
     flex-direction: column;
-    text-align: center;
     gap: 72px;
 }
 
@@ -687,13 +686,6 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     color: #FFFFFF;
     margin-bottom: 16px;
     flex-direction: column;
-}
-
-.footer-narrow {
-    /* align-items: baseline; */
-    display: flex;
-    flex-direction: column;
-    text-align: center;
 }
 
 .footer-content {
@@ -1087,8 +1079,7 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     .hero {
         padding-top: 112px;
         padding-bottom: 112px;
-        width: 768px;
-        height: 436px;
+        max-width: 768px;
         background-image:
         linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
          url("../images/hero-tab.jpg");
@@ -1121,11 +1112,11 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
 
     .features-item {
         width: calc((100% - 24px) / 2);
-        display: flex;
         align-items: flex-start;
         justify-content: flex-start;
         flex-direction: column;
         gap: 8px;
+        text-align: left;
     }
 
     .features-subtitle {
@@ -1174,7 +1165,6 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     .footer-content {
         align-items: flex-start;
         text-align: left;
-        max-width: 264px;
         margin: 0;
     }
 
@@ -1208,7 +1198,7 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     }
 }
 
-@media screen and (min-width:1128px) {
+@media screen and (min-width:1158px) {
     .container {
         align-items: center;
         width: 1158px;
@@ -1237,8 +1227,7 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     .hero {
         padding-top: 188px;
         padding-bottom: 188px;
-        width: 1440px;
-        height: 600px;
+        max-width: 1440px;
         background-image:
         linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url("../images/prie-hdr.jpg");
@@ -1259,9 +1248,8 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     }
 
     .features {
-        /* padding-top: 120px;
-        padding-bottom: 120px; */
-        padding: 0;
+        padding-top: 120px;
+        padding-bottom: 120px;
     }
 
     .features-list {
@@ -1283,16 +1271,13 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
         border-radius: 4px;
         width: 264px;
         height: 112px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 120px;
         margin-bottom: 8px;
     }
 
     .features-icon {
         width: 64px;
         height: 64px;
-}
+    }
 
     .features-subtitle {
         font-weight: 500;
@@ -1308,7 +1293,7 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: #434455;
-        margin-bottom: 120px;
+        font-weight: 400;
     }
  
     .team {
@@ -1350,6 +1335,7 @@ box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
         min-width: 1158px;
         margin: 0 auto;
         padding: 0 15px;
+        align-items: baseline;
     }
         
     .footer-content {
